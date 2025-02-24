@@ -5,7 +5,10 @@ require("dotenv").config();
 
 
 const app = express();
-connectDB();
+connectDB().catch(err => {
+    console.error("Database connection failed", err);
+});
+
 
 app.use(cors());
 app.use(express.json());
@@ -32,11 +35,11 @@ app.post("/api/messages/send-message", (req, res) => {
 const path = require("path");
 
 // Serve frontend build (if React is inside frontend/ folder)
-app.use(express.static(path.join(__dirname, "../frontend/build")));
+// app.use(express.static(path.join(__dirname, "../frontend/build")));
 
-app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "../frontend/build", "index.html"));
-});
+// app.get("*", (req, res) => {
+//     res.sendFile(path.join(__dirname, "../frontend/build", "index.html"));
+// });
 
 
 
