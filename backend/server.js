@@ -24,6 +24,9 @@ app.post("/api/messages/send-message", (req, res) => {
     res.json({ success: true, message: "Message received!" });
   });
   
+  app.get("/", (req, res) => {
+    res.send("Backend is working!");
+});
 
 
 const path = require("path");
