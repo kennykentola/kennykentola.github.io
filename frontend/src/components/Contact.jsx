@@ -104,7 +104,7 @@ const Contact = () => {
         <h2>Contact Information</h2>
         <p>Email: <a href="mailto:peterkehindeademola@gmail.com">peterkehindeademola@gmail.com</a></p>
         <p>GitHub: <a href="https://github.com/kennykentola" target="_blank" rel="noopener noreferrer">github.com/kennykentola</a></p>
-        <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">linkedin.com/in/yourprofile</a></p>
+        <p>LinkedIn: <a href="https://linkedin.com/in/https://www.linkedin.com/in/ademola-peter-kehinde-44650a2b9?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer">linkedin.com/in/yourprofile</a></p>
       </section>
     </>
   );

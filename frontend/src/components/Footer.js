@@ -46,13 +46,13 @@ const Footer = () => {
           <p>© 2024 kennykentola. All Rights Reserved.</p>
 
           <div className="social-links">
-            <a href="https://www.facebook.com/YOUR_PROFILE" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.facebook.com/https://web.facebook.com/kehindepeter.ademola" target="_blank" rel="noopener noreferrer">
               <FaFacebook className="social-icon" />
             </a>
-            <a href="https://wa.me/YOUR_NUMBER" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/+2348163571677" target="_blank" rel="noopener noreferrer">
               <FaWhatsapp className="social-icon" />
             </a>
-            <a href="https://www.linkedin.com/in/YOUR_PROFILE" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.linkedin.com/in/Ademola peter kehinde" target="_blank" rel="noopener noreferrer">
               <FaLinkedin className="social-icon" />
             </a>
           </div>
