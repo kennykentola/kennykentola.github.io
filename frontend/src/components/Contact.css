@@ -10,7 +10,9 @@
   justify-content: center;
   width: 96%;
 }
-
+.contact-container h2 {
+  color: white;
+}
 /* Contact Form */
 .contact-form {
   max-width: 600px;

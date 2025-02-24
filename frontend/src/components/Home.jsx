@@ -30,10 +30,10 @@ function Home() {
      
 
 <About/>
+  {/* Skills Section */}
+  <Skills/>
 
-
-      {/* Skills Section */}
-    <Skills/>
+    
 
       {/* Projects Section */}
     
