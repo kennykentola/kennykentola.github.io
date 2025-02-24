@@ -1,0 +1,185 @@
+/* General Styling */
+body {
+  background-color: black;
+  color: white;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+/* Project Section */
+.projects {
+  padding: 50px 20px;
+  background-color: rgba(26, 26, 46, 0.9);
+  color: white;
+}
+
+.projects h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+.projects h2 span {
+  color: #a855f7;
+}
+
+/* Slideshow */
+.slideshow {
+  position: relative;
+  width: 90%;
+  max-width: 600px;
+  margin: auto;
+  overflow: hidden;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Slide */
+.slide {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  background: rgba(26, 26, 46, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* Text Styling */
+.slide h3 {
+  font-size: 1.8rem;
+}
+
+.slide p {
+  font-size: 1.1rem;
+  padding: 10px;
+}
+
+/* Navigation Buttons */
+.prev-btn, .next-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.prev-btn { left: 10px; }
+.next-btn { right: 10px; }
+
+.prev-btn:hover, .next-btn:hover {
+  color: #a855f7;
+}
+
+/* Image Styling */
+.project-image {
+  width: 100%;
+  max-width: 500px; /* Adjust the max width as needed */
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.2);
+}
+
+
+/* Dots Indicator */
+.dots {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+.dot {
+  height: 12px;
+  width: 12px;
+  margin: 0 5px;
+  background-color: rgb(255, 253, 253);
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #a855f7;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .projects h2 {
+    font-size: 2rem;
+  }
+
+  .slide h3 {
+    font-size: 1.6rem;
+  }
+
+  .slide p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects h2 {
+    font-size: 1.8rem;
+  }
+
+  .slide {
+    padding: 15px;
+  }
+
+  .slide h3 {
+    font-size: 1.5rem;
+  }
+
+  .slide p {
+    font-size: 0.95rem;
+  }
+
+  .prev-btn, .next-btn {
+    font-size: 1.8rem;
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects h2 {
+    font-size: 1.5rem;
+  }
+
+  .slide {
+    padding: 10px;
+  }
+
+  .slide h3 {
+    font-size: 1.3rem;
+  }
+
+  .slide p {
+    font-size: 0.85rem;
+  }
+
+  .prev-btn, .next-btn {
+    font-size: 1.5rem;
+  }
+
+  .dot {
+    width: 8px;
+    height: 8px;
+  }
+}

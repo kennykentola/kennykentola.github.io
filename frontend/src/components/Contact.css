@@ -1,0 +1,169 @@
+/* Contact Section */
+.contact-container {
+  background: rgba(26, 26, 46, 0.9);
+  color: white;
+  text-align: center;
+  padding: 50px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 96%;
+}
+
+/* Contact Form */
+.contact-form {
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+  padding: 20px;
+  box-sizing: border-box; /* Prevent overflow */
+}
+
+/* Ensure form groups do not exceed mobile screen width */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* Labels */
+.form-group label {
+  font-size: 16px;
+  margin-bottom: 5px;
+  font-weight: 600;
+  text-align: left;
+}
+
+/* Inputs, Textarea, and Select */
+input, textarea, select {
+  background: rgba(26, 26, 46, 0.7);
+  border: 1px solid #444;
+  color: white;
+  padding: 12px;
+  border-radius: 6px;
+  width: 100%; /* Ensure inputs do not overflow */
+  max-width: 100%; /* Prevent stretching */
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+/* Adjust textarea height */
+textarea {
+  height: 100px;
+  resize: none;
+}
+
+/* Radio Group */
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.radio-group input {
+  margin-right: 5px;
+}
+
+.radio-group label {
+  font-size: 16px;
+  font-weight: normal;
+}
+
+/* Send Button */
+.send-btn {
+  padding: 12px;
+  border: none;
+  background: linear-gradient(to bottom, #555, #222);
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: 0.3s;
+  width: 100%;
+  max-width: 100%;
+}
+
+.send-btn:hover {
+  background: linear-gradient(to bottom, #777, #444);
+}
+
+/* Contact Information Section */
+.contact-info-section {
+  /* margin-top: 40px; */
+  padding: 5px;
+  text-align: center;
+  background: white;
+  
+  /* width: 100%; */
+  /* max-width: 500px; */
+}
+
+.contact-info-section h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.contact-info-section p {
+  font-size: 16px;
+  margin: 5px 0;
+  color: #444;
+}
+
+.contact-info-section a {
+  color: blueviolet;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.contact-info-section a:hover {
+  text-decoration: underline;
+}
+
+/* ✅ Mobile Fix: Prevent inputs from overflowing */
+@media only screen and (max-width: 768px) {
+  .contact-container {
+    padding: 30px 10px;
+    text-align: center;
+  }
+
+  .contact-container h2 {
+    font-size: 24px;
+    color: white;
+  }
+
+  .contact-form {
+    width: 100%;
+    max-width: 400px;
+    padding-bottom: 20px;
+    grid-template-columns: 1fr;
+  }
+
+  /* Ensure inputs do not exceed screen width */
+  input, textarea, select {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .send-btn {
+    font-size: 16px;
+    width: 100%;
+  }
+
+  .contact-info-section {
+    width: 100%; 
+    /* padding: 15px; */
+  }
+
+  .contact-info-section h2 {
+    font-size: 20px;
+  }
+
+  .contact-info-section p {
+    font-size: 14px;
+  }
+}

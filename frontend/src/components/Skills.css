@@ -1,0 +1,108 @@
+.skills-container {  
+  padding: 50px 10%;  
+  background: #fff;  
+}  
+
+.skills-grid {  
+  display: grid;  
+  grid-template-columns: repeat(2, 1fr);  
+  gap: 40px;  
+}  
+
+h2 {  
+  color: #333;  
+}  
+
+/* Skill Box Styles */  
+.skill-box {  
+  display: flex;  
+  align-items: center;  
+  padding: 20px;  
+  border: 2px solid red;  
+  border-radius: 10px;  
+  transition: transform 0.3s ease-in-out;  
+}  
+
+.skill-box:hover {  
+  transform: translateY(-5px);  
+}  
+
+.skill-icon {  
+  width: 80px;  
+  height: 80px;  
+  display: flex;  
+  align-items: center;  
+  justify-content: center;  
+  border: 2px solid red;  
+  border-radius: 10px;  
+  padding: 10px;  
+  margin-right: 20px;  
+}  
+
+.skill-icon img {  
+  width: 50px;  
+  height: 50px;  
+}  
+
+.skill-content h3 {  
+  font-size: 1.3rem;  
+  margin-bottom: 5px;  
+  font-weight: bold;  
+}  
+
+.skill-content p {  
+  font-size: 0.9rem;  
+  color: #666;  
+}  
+
+/* Media Queries for Tablet and Mobile */  
+@media only screen and (max-width: 1024px) {  
+  .skills-grid {  
+    grid-template-columns: repeat(2, 1fr); /* Keep 2 columns for tablets */  
+    gap: 30px; /* Reduce gap for smaller screens */  
+  }  
+
+  .skills-container {  
+    padding: 40px 5%; /* Adjust padding for tablets */  
+  }  
+
+  h2 {  
+    font-size: 2rem; /* Adjust heading size for tablets */  
+  }  
+}  
+
+@media only screen and (max-width: 768px) {  
+  .skills-grid {  
+    grid-template-columns: 1fr; /* Stack items in a single column for mobile */  
+  }  
+
+  .skills-container {  
+    padding: 30px 5%; /* Adjust padding for mobile */  
+  }  
+
+  h2 {  
+    font-size: 1.8rem; /* Adjust heading size for mobile */  
+  }  
+
+  .skill-box {  
+    padding: 15px; /* Adjust padding for skill boxes on mobile */  
+  }  
+
+  .skill-icon {  
+    width: 60px; /* Smaller icon size for mobile */  
+    height: 60px;  
+  }  
+
+  .skill-icon img {  
+    width: 40px; /* Smaller image size for mobile */  
+    height: 40px;  
+  }  
+
+  .skill-content h3 {  
+    font-size: 1.2rem; /* Reduce font size for mobile */  
+  }  
+
+  .skill-content p {  
+    font-size: 0.8rem; /* Reduce font size for mobile */  
+  }  
+}

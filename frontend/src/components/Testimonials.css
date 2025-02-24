@@ -1,0 +1,140 @@
+/* General styles */  
+.testimonials {  
+    font-family: 'Arial', sans-serif;  
+    background-color: white;  
+    color: #bbb;  
+    text-align: center;  
+    padding: 50px;  
+}  
+
+.testimonials h2 {  
+    font-size: 36px;  
+    font-weight: bold;  
+}  
+
+.testimonials h2 span {  
+    color: #0f3cc4;  
+}  
+
+.testimonials p {  
+    font-size: 18px;  
+    margin-bottom: 40px;  
+    color: #bbb;  
+}  
+
+/* Grid layout */  
+.testimonials-grid {  
+    display: grid;  
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));  
+    gap: 20px;  
+    max-width: 1000px;  
+    margin: auto;  
+}  
+
+/* Testimonial cards */  
+.testimonial {  
+    background-color: #fcfafa;  
+    padding: 20px;  
+    border-radius: 10px;  
+    border: 1px solid red;  
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);  
+    transition: transform 0.3s ease-in-out;  
+}  
+
+.testimonial:hover {  
+    transform: translateY(-5px);  
+}  
+
+/* Client info */  
+.client-info {  
+    display: flex;  
+    align-items: center;  
+    margin-top: 15px;  
+}  
+
+.client-info img {  
+    width: 50px;  
+    height: 50px;  
+    border-radius: 50%;  
+    margin-right: 10px;  
+}  
+
+.client-info h4 {  
+    margin: 0;  
+    font-size: 18px;  
+}  
+
+.client-info p {  
+    margin: 0;  
+    font-size: 14px;  
+    color: #bbb;  
+}  
+
+.fade-in {  
+    opacity: 0;  
+    transform: translateY(20px);  
+    animation: fadeIn 1s ease-in forwards;  
+}  
+
+@keyframes fadeIn {  
+    to {  
+        opacity: 1;  
+        transform: translateY(0);  
+    }  
+}  
+
+/* Media Queries for Tablet and Mobile */  
+@media only screen and (max-width: 1024px) {  
+    .testimonials {  
+        padding: 40px 20px; /* Adjust padding for tablets */  
+    }  
+
+    .testimonials h2 {  
+        font-size: 32px; /* Adjust heading size for tablets */  
+    }  
+
+    .testimonials p {  
+        font-size: 16px; /* Adjust paragraph size for tablets */  
+    }  
+
+    .testimonials-grid {  
+        gap: 15px; /* Reduce gap for tablets */  
+    }  
+}  
+
+@media only screen and (max-width: 768px) {  
+    .testimonials {  
+        padding: 30px 10px; /* Adjust padding for mobile */  
+    }  
+
+    .testimonials h2 {  
+        font-size: 28px; /* Reduce heading size for mobile */  
+    }  
+
+    .testimonials p {  
+        font-size: 14px; /* Reduce paragraph size for mobile */  
+        margin-bottom: 30px; /* Adjust margin for mobile */  
+    }  
+
+    .testimonials-grid {  
+        grid-template-columns: 1fr; /* Stack testimonials in a single column for mobile */  
+        gap: 10px; /* Further reduce gap for mobile */  
+    }  
+
+    .testimonial {  
+        padding: 15px; /* Adjust padding for testimonial cards on mobile */  
+    }  
+
+    .client-info img {  
+        width: 40px; /* Smaller image size for mobile */  
+        height: 40px;  
+    }  
+
+    .client-info h4 {  
+        font-size: 16px; /* Reduce font size for client name */  
+    }  
+
+    .client-info p {  
+        font-size: 12px; /* Reduce font size for client position */  
+    }  
+}

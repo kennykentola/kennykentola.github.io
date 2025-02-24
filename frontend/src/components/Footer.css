@@ -1,0 +1,102 @@
+/* .social-links{
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    
+}
+.social-links a{
+    font-size: 20px;
+    margin: 0 10px;
+    color: white; 
+ } */
+
+/* Footer Styles */
+.footer {
+    background-color:rgb(26, 26, 46,0.8);/* ✅ Light Blue */
+    color: white;
+    padding: 20px 10px;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* ✅ Make it responsive */
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* ✅ Footer Sections */
+.footer-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.footer-section {
+    text-align: center;
+}
+
+.footer-section h4 {
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* ✅ Links */
+.footer-section a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 0.9rem;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+}
+
+/* ✅ Social Icon */
+.social-icon {
+    font-size: 20px;
+    background: #333;
+    color: white;
+    padding: 8px;
+    border-radius: 50%;
+    text-align: center;
+    transition: 0.3s ease-in-out;
+}
+
+.social-icon:hover {
+    background: black;
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-section {
+        margin-bottom: 10px;
+    }
+}
+
+
+
+
+.social-links {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .social-icon {
+    font-size: 24px;
+    color: white;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .social-icon:hover {
+    color: #007bff;
+  }
+  

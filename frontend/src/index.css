@@ -1,0 +1,31 @@
+/* body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+} */
+/* 
+container: {
+  textAlign: "center",
+  padding: "20px",
+  fontFamily: "Arial, sans-serif",
+  backgroundImage: "url('path/to/your/image.jpg')",
+  backgroundSize: "cover",
+  backgroundPosition: "center",
+  color: "#fff", // Change text color if the background is dark
+}, */
+
+.container {
+  text-align: center;  /* ✅ Corrected syntax */
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  color: "#fff";
+  background-color: burlywood;
+}

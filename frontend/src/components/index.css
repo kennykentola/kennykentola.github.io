@@ -1,0 +1,6 @@
+.container {
+    text-align: center;  /* ✅ Corrected syntax */
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
