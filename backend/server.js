@@ -3,45 +3,36 @@ const connectDB = require("./config/db");
 const cors = require("cors");
 require("dotenv").config();
 
-
 const app = express();
+
+// Connect to MongoDB
 connectDB().catch(err => {
     console.error("Database connection failed", err);
 });
 
+// ✅ Setup CORS to allow frontend access
+const corsOptions = {
+    origin: ["http://localhost:3000", "https://frontend-navy-pi-35.vercel.app"],
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+    credentials: true,
+};
 
-app.use(cors());
-app.use(express.json());
+app.use(cors(corsOptions));
+app.use(express.json()); // Middleware for JSON parsing
 
+// ✅ Test route
 app.get("/", (req, res) => {
-    res.send("Welcome to My Portfolio API!");
-});
-
-
-// Import routes
-app.use("/api/messages", require("./routes/messageRoutes"));
-
-app.post("/api/messages/send-message", (req, res) => {
-    const { name, email, message } = req.body;
-    console.log("Message received:", name, email, message);
-    res.json({ success: true, message: "Message received!" });
-  });
-  
-  app.get("/", (req, res) => {
     res.send("Backend is working!");
 });
 
+// ✅ Import and use routes
+app.use("/api/messages", require("./routes/messageRoutes"));
 
-const path = require("path");
+// ✅ Handle 404 errors
+app.use((req, res) => {
+    res.status(404).json({ success: false, message: "Route not found" });
+});
 
-// Serve frontend build (if React is inside frontend/ folder)
-// app.use(express.static(path.join(__dirname, "../frontend/build")));
-
-// app.get("*", (req, res) => {
-//     res.sendFile(path.join(__dirname, "../frontend/build", "index.html"));
-// });
-
-
-
+// Start the server
 const PORT = process.env.PORT || 5001;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+app.listen(PORT, () => console.log(`✅ Server running on port ${PORT}`));
