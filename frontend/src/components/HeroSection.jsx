@@ -9,7 +9,7 @@ const roles = [" web developer", "Passionate About Coding", "Software Developer"
 
 const HeroSection = () => {
   const [typedText, setTypedText] = useState("Welcome to ");
-  const fullText = "My Portfolio, I'm  ";
+  const fullText = "Myy Portfolio, I'm  ";
   const [displayRole, setDisplayRole] = useState(roles[4]);
   const [menuOpen, setMenuOpen] = useState(false); // Mobile Menu State
 
