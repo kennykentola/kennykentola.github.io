@@ -12,13 +12,13 @@ const skillsData = [
     id: 1,  
     icon: frontendIcon,  
     title: "Front-End Development",  
-    description: "Currently, I'm doing frontend development with React, HTML",  
+    description: "Currently, I'm doing frontend development with React, HTML,css",  
   },  
   {  
     id: 2,  
     icon: backendIcon,  
     title: "Back-End Development",  
-    description: "Currently, I'm doing backend development with NodeJs, ExpressJs, NestJs, Python Django",  
+    description: "Currently, I'm doing backend development with NodeJs, ExpressJs, Python Django",  
   },  
   {  
     id: 3,  
