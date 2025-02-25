@@ -95,13 +95,13 @@ textarea {
 
 /* Contact Information Section */
 .contact-info-section {
-  /* margin-top: 40px; */
+  margin-top: 40px;
   padding: 5px;
   text-align: center;
   background: white;
   
-  /* width: 100%; */
-  /* max-width: 500px; */
+  width: 90%;
+  max-width: 500px;
 }
 
 .contact-info-section h2 {
@@ -139,7 +139,7 @@ textarea {
   }
 
   .contact-form {
-    width: 100%;
+    /* width: 100%; */
     max-width: 400px;
     padding-bottom: 20px;
     grid-template-columns: 1fr;
@@ -157,7 +157,9 @@ textarea {
   }
 
   .contact-info-section {
-    width: 100%; 
+
+    width: 90%; 
+    height: 100%;
     /* padding: 15px; */
   }
 

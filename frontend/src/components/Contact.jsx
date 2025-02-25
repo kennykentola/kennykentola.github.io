@@ -21,7 +21,7 @@ const Contact = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:5001/api/messages/send-message", {
+      const response = await fetch("https://backend-rntqth1tu-kennykentolas-projects.vercel.app/api/messages/send-message", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
