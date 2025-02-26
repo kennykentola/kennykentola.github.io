@@ -1,6 +1,37 @@
 /* General Styling */
+:root{
+  --color-primary-a0: #ffffff;
+  --color-primary-a5: #d9e6e3;
+  --color-primary-a10: #b4cdc8;
+  --color-primary-a15: #90b4ae;
+  --color-primary-a20: #6c9c94;
+  --color-primary-a25: #46847b;
+  --color-primary-a30: #186d63;
+  --color-primary-a35: #195a52;
+  --color-primary-a40: #184842;
+  --color-primary-a45: #163732;
+  --color-primary-a50: #132724;
+  --color-primary-a55: #0d1715;
+  --color-primary-a100: #000000;
+  --color-primary-a1220: #ffffff;
+  --color-primary-a1252: #d9d4e6;
+  --color-primary-a110: #b4abcd;
+  --color-primary-a115: #8f83b5;
+  --color-primary-a120: #6b5d9d;
+  --color-primary-a125: #453985;
+  --color-primary-a130: #19186d;
+  --color-primary-a135: #19165a;
+  --color-primary-a140: #181349;
+  --color-primary-a145: #161037;
+  --color-primary-a150: #140c27;
+  --color-primary-a155: #0c0618;
+  --color-primary-a1100: #000000;
+  
+   
+}
+
 body {
-  background-color: black;
+  background-color: var(--color-primary-a40);
   color: white;
   font-family: Arial, sans-serif;
   text-align: center;
@@ -9,18 +40,18 @@ body {
 /* Project Section */
 .projects {
   padding: 50px 20px;
-  background-color: rgba(26, 26, 46, 0.9);
-  color: white;
+  background-color: var(--color-primary-a40);
+  color: var(--color-primary-a10);
 }
 
 .projects h2 {
   font-size: 2.5rem;
   font-weight: bold;
-  color: white;
+  color: #ffffff;
 }
 
 .projects h2 span {
-  color: #a855f7;
+  color: var(--color-primary-a115);
 }
 
 /* Slideshow */
@@ -42,7 +73,7 @@ body {
   position: relative;
   width: 100%;
   text-align: center;
-  background: rgba(26, 26, 46, 0.8);
+  background: var(--color-primary-a145);
   padding: 20px;
   border-radius: 10px;
   min-height: 180px;
@@ -71,7 +102,7 @@ body {
   background: none;
   border: none;
   font-size: 2rem;
-  color: white;
+  color: var(--color-primary-a0);
   cursor: pointer;
   z-index: 2;
 }
@@ -83,11 +114,11 @@ body {
   color: #a855f7;
 }
 
-/* Image Styling */
+
 .project-image {
   width: 100%;
-  max-width: 500px; /* Adjust the max width as needed */
-  height: auto;
+  max-width: 500px; 
+  height: 200px;
   border-radius: 10px;
   box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.2);
 }

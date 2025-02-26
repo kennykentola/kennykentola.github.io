@@ -1,6 +1,6 @@
 .call-button {
     background-color: #007bff; 
-    color: white;
+    color: rgb(250, 4, 4);
     padding: 8px 15px;
     font-size: 16px;
     border: none;
@@ -11,7 +11,7 @@
   }
   
   .call-button:hover {
-    background-color: #0056b3; /* Darker blue */
+    background-color: #0de9b9; /* Darker blue */
   }
   
   strong{
@@ -19,7 +19,7 @@
   }
   
   .about-title{
-    color: white;
+    color: #333;
   }
 
 
@@ -27,8 +27,8 @@
   /* about me start */
 
   .about {
-    background-color: rgb(26, 26, 46,0.9); /* Dark background */
-    color: #fff; /* White text */
+    background-color: rgba(255, 255, 255, 0.9); /* Dark background */
+    color: #333; /* White text */
     text-align: center;
     padding: 50px 20px;
   }

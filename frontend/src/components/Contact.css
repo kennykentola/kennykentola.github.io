@@ -1,6 +1,29 @@
 /* Contact Section */
+:root{
+  --color-primary-a0: #ffffff;
+  --color-primary-a5: #d9e6e3;
+  --color-primary-a10: #b4cdc8;
+  --color-primary-a15: #90b4ae;
+  --color-primary-a20: #6c9c94;
+  --color-primary-a25: #46847b;
+  --color-primary-a30: #186d63;
+  --color-primary-a35: #195a52;
+  --color-primary-a40: #184842;
+  --color-primary-a45: #163732;
+  --color-primary-a50: #132724;
+  --color-primary-a55: #0d1715;
+  --color-primary-a100: #000000;}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+
 .contact-container {
-  background: rgba(26, 26, 46, 0.9);
+  background: var(--color-primary-a45);
   color: white;
   text-align: center;
   padding: 50px 20px;
@@ -8,8 +31,10 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 96%;
+  width: 100%;
+  min-height: 100vh;
 }
+
 .contact-container h2 {
   color: white;
 }
@@ -42,9 +67,9 @@
 
 /* Inputs, Textarea, and Select */
 input, textarea, select {
-  background: rgba(26, 26, 46, 0.7);
+  background: rgba(253, 253, 255, 0.7);
   border: 1px solid #444;
-  color: white;
+  color: rgb(22, 12, 12);
   padding: 12px;
   border-radius: 6px;
   width: 100%; /* Ensure inputs do not overflow */
@@ -85,29 +110,33 @@ textarea {
   cursor: pointer;
   border-radius: 6px;
   transition: 0.3s;
-  width: 100%;
-  max-width: 100%;
+  /* width: 100%; */
+  /* max-width: 100%; */
 }
 
 .send-btn:hover {
   background: linear-gradient(to bottom, #777, #444);
 }
 
-/* Contact Information Section */
 .contact-info-section {
   margin-top: 40px;
-  padding: 5px;
+  padding: 20px; 
   text-align: center;
-  background: white;
   
-  width: 90%;
-  max-width: 500px;
+  /* ✅ Match background to container */
+  background: rgba(255, 255, 255, 0.9);
+  color: white;
+
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
+
 
 .contact-info-section h2 {
   font-size: 24px;
   margin-bottom: 10px;
-  color: #222;
+  color: #1a1717;
 }
 
 .contact-info-section p {
@@ -135,7 +164,7 @@ textarea {
 
   .contact-container h2 {
     font-size: 24px;
-    color: white;
+    /* color: white; */
   }
 
   .contact-form {
@@ -157,10 +186,9 @@ textarea {
   }
 
   .contact-info-section {
-
-    width: 90%; 
-    height: 100%;
-    /* padding: 15px; */
+    width: 100%;
+    max-width: 100%;
+    padding: 20px; /* Ensure spacing */
   }
 
   .contact-info-section h2 {

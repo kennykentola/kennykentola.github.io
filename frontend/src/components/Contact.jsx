@@ -97,15 +97,16 @@ const Contact = () => {
 
           <button type="submit" className="send-btn">Send Message</button>
         </form>
-      </section>
-
-      {/* Contact Information Section */}
-      <section className="contact-info-section">
+        {/* Contact Information Section */}
+      <div className="contact-info-section">
         <h2>Contact Information</h2>
         <p>Email: <a href="mailto:peterkehindeademola@gmail.com">peterkehindeademola@gmail.com</a></p>
         <p>GitHub: <a href="https://github.com/kennykentola" target="_blank" rel="noopener noreferrer">github.com/kennykentola</a></p>
         <p>LinkedIn: <a href="https://www.linkedin.com/in/ademola-peter-kehinde-44650a2b9" target="_blank" rel="noopener noreferrer">linkedin.com/in/ademola-peter-kehinde</a></p>
+      </div>
       </section>
+
+      
     </>
   );
 };

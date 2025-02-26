@@ -1,6 +1,37 @@
+:root{
+  --color-primary-a0: #ffffff;
+  --color-primary-a5: #d9e6e3;
+  --color-primary-a10: #b4cdc8;
+  --color-primary-a15: #90b4ae;
+  --color-primary-a20: #6c9c94;
+  --color-primary-a25: #46847b;
+  --color-primary-a30: #186d63;
+  --color-primary-a35: #195a52;
+  --color-primary-a40: #184842;
+  --color-primary-a45: #163732;
+  --color-primary-a50: #132724;
+  --color-primary-a55: #0d1715;
+  --color-primary-a100: #000000;
+  --color-primary-a1220: #ffffff;
+  --color-primary-a1252: #d9d4e6;
+  --color-primary-a110: #b4abcd;
+  --color-primary-a115: #8f83b5;
+  --color-primary-a120: #6b5d9d;
+  --color-primary-a125: #453985;
+  --color-primary-a130: #19186d;
+  --color-primary-a135: #19165a;
+  --color-primary-a140: #181349;
+  --color-primary-a145: #161037;
+  --color-primary-a150: #140c27;
+  --color-primary-a155: #0c0618;
+  --color-primary-a1100: #000000;
+  
+   
+}
+
 .skills-container {  
   padding: 50px 10%;  
-  background: #fff;  
+  background: var(--color-primary-a0);  
 }  
 
 .skills-grid {  

@@ -1,13 +1,38 @@
-
-
 /* ================= General Styles ================= */
+
+:root{
+--color-primary-a0: #ffffff;
+--color-primary-a5: #d9e6e3;
+--color-primary-a10: #b4cdc8;
+--color-primary-a15: #90b4ae;
+--color-primary-a20: #6c9c94;
+--color-primary-a25: #46847b;
+--color-primary-a30: #186d63;
+--color-primary-a35: #195a52;
+--color-primary-a40: #184842;
+--color-primary-a45: #163732;
+--color-primary-a50: #132724;
+--color-primary-a55: #0d1715;
+--color-primary-a100: #000000;}
+
+
+
+/* Prevent horizontal scrolling */
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+
+
+
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     text-align: center;
-    background-color: #F8F8F8;
-    color: white;
+    background-color: var(--color-primary-a0);
+    color: var(--color-primary-a0);
    
 }
 
@@ -21,13 +46,13 @@ body {
     justify-content: space-around;
     align-items: center;
     padding: 15px 20px;
-    background: #1A1A2E;
-    background: rgb(26, 26, 46,0.8);
+    
+    background: var(--color-primary-a45);
     font-size: 16px;
     z-index: 1000;
 }
 
-/* Contact Button (White background like the image) */
+
 .contact-btn {
   background: white;
   color: black;
@@ -52,7 +77,19 @@ body {
 } */
 
 
+.btn {
+    background-color: rgb(127, 7, 240);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+}
 
+.btn:hover {
+    background-color: #0f1188;
+}
 /* ✅ Overlay for Dimming Effect */
 .hero::before {
     content: "";
@@ -61,7 +98,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.6); 
+    background: rgba(0, 0, 0, 0.4); 
     z-index: 1;
 }
 
@@ -83,19 +120,19 @@ body {
     animation: blink 1s infinite;
 }
 
-
+.hero-intro{
+    z-index: 35;
+}
 
 .logo {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style:oblique;
     display: flex;
     align-items: center;
     font-weight: bold;
 }
 
-.logo-img {
-    width: 50px; 
-    height: auto;
-    margin-right: 10px;
-}
+
 
 .nav-links {
     list-style: none;
@@ -123,8 +160,25 @@ body {
     border: 2px solid;
 }
 
+
+
+.nav-links a {
+    white-space: nowrap; 
+    padding: 8px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.nav-links a:hover {
+    background: white;
+    color: black;
+    border: 2px solid;
+    text-decoration: none;
+}
 .menu-toggle {  
-    display: none; /* Initially hidden */  
+    display: none;  
 }  
 /* ================= Hero Section ================= */  
 .hero {  
@@ -132,7 +186,7 @@ body {
     text-align: center;  
     padding: 90px 20px;  
     background: url('../assets/laptop.jpg') no-repeat center center/cover;  
-    color: white;  
+    color: var(--color-primary-a0);  
     height: 100vh; /* You might want to consider min-height for responsiveness */  
     display: flex;  
     flex-direction: column;  
@@ -151,11 +205,11 @@ body {
 }  
 
 
-/* .hero-title {  
+.hero-title {  
    
     border-right: 3px solid white;  
     animation: blinks 1s infinite alternate;  
-} */
+}
 
 
 @keyframes blink {
@@ -168,10 +222,7 @@ body {
     100% { border-right-color: violet; color: violet;  color: white;}
 }
 
-/* Cursor Blinking  */
- /* @keyframes blinks {
-    50% { border-color: transparent; }
-} */
+
 
 .hero-title {  
     font-size: 5vw; /* Responsive font size */  
@@ -219,11 +270,11 @@ body {
     .scroll-down {  
         font-size: 20px; /* Adjust scroll-down indicator */  
     }  
-}
+
 /* Hero Image */
 .hero-image {
     width: 80%;
-    max-width: 500px;
+    /* max-width: 500px; */
     margin: 20px 0;
 }
 
@@ -245,7 +296,7 @@ body {
     color: rgb(181, 181, 185);
 }
 
-/* Scroll Down Animation */
+
 .scroll-down {
     font-size: 30px;
     margin-top: 15px;
@@ -257,13 +308,18 @@ body {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(10px); }
 } 
+.menu-toggle {  
+    display: none;  
+}  
 
-/* Extra styles for mobile screens */  
-@media only screen and (max-width: 768px) {  
-    .navbar {  
-        padding: 15px 20px; /* Adjust padding for mobile */  
+
+    .menu-toggle {  
+        display: flex;  
+        cursor: pointer;  
+        font-size: 24px;  
+        color: white;  
     }  
-    
+
     .nav-links {  
         display: none;  
         flex-direction: column; 
@@ -271,34 +327,39 @@ body {
         top: 60px;  
         left: 0;  
         right: 0;  
-        background: #1A1A2E;  
+        align-items: center;
+        background-color: var(--color-primary-a45);
         z-index: 999;   
     }  
 
-    .nav-links.show {  
-        display: flex; /* Show nav links when menu is open */  
-    }  
+  
 
-    .menu-toggle {  
-        display: flex; /* Show hamburger icon */  
-        cursor: pointer;  
-        font-size: 24px; /* Hamburger icon size */  
-        color: white; /* Hamburger icon color */  
-    }  
-    .hero-intro{
-        font-size: 0.45rem;
-        font-weight: 100;
-        /* z-index: 3; */
+    .nav-links a {
+        width: 80%;
+        text-align: center;
+        padding: 12px;
     }
-}  
 
-/* Optionally, style individual links for mobile view */  
-.nav-links li {  
-    padding: 10px 20px; /* Add some padding for better touch area */  
-}
+    .contact-btn {
+        opacity: 1; /* Ensures visibility */
+    }
 
-.hero-intro{
-    font-size: 2rem;
-    font-weight: 700;
-    z-index: 3;
+
+    .nav-links.show {  
+        display: flex;  
+        width: 100%;
+        height: auto;
+    } 
+    
+   
+
+    .nav-links a {
+        width: 80%; /* Makes buttons uniform */
+        text-align: center;
+        padding: 12px;
+    }
+
+    .contact-btn {
+        opacity: 1; /* Ensures visibility */
+    }
 }

@@ -64,6 +64,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./components/Home";
 import Contact from "./components/Contact";
+import EducationExperience from "./components/EducationExperience";
 import Footer from "./components/Footer";
 // import CylinderCanvas from "./components/CylinderCanvas"; // Import the new file
 
@@ -73,6 +74,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/EducationExperience" element={<EducationExperience />} />
       </Routes>
       <Footer />
       {/* <CylinderCanvas />  */}

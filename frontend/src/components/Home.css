@@ -1,9 +1,25 @@
 /* General Styles */
+:root{
+  --color-primary-a0: #ffffff;
+  --color-primary-a5: #d9e6e3;
+  --color-primary-a10: #b4cdc8;
+  --color-primary-a15: #90b4ae;
+  --color-primary-a20: #6c9c94;
+  --color-primary-a25: #46847b;
+  --color-primary-a30: #186d63;
+  --color-primary-a35: #195a52;
+  --color-primary-a40: #184842;
+  --color-primary-a45: #163732;
+  --color-primary-a50: #132724;
+  --color-primary-a55: #0d1715;
+  --color-primary-a100: #000000;}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     text-align: center;
+    background-color: #fff;
   }
   
   h1, h2 {

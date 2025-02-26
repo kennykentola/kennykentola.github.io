@@ -11,9 +11,24 @@
     color: white; 
  } */
 
+ :root{
+    --color-primary-a0: #ffffff;
+    --color-primary-a5: #d9e6e3;
+    --color-primary-a10: #b4cdc8;
+    --color-primary-a15: #90b4ae;
+    --color-primary-a20: #6c9c94;
+    --color-primary-a25: #46847b;
+    --color-primary-a30: #186d63;
+    --color-primary-a35: #195a52;
+    --color-primary-a40: #184842;
+    --color-primary-a45: #163732;
+    --color-primary-a50: #132724;
+    --color-primary-a55: #0d1715;
+    --color-primary-a100: #000000;}
+
 /* Footer Styles */
 .footer {
-    background-color:rgb(26, 26, 46,0.8);/* ✅ Light Blue */
+    background-color:var(--color-primary-a40);/* ✅ Light Blue */
     color: white;
     padding: 20px 10px;
     text-align: center;

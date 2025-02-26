@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="footer-container">
         {/* ✅ Brand Name */}
         <div className="footer-brand">
-          <h3>Kenkentola</h3>
+          <h3>Kennykentola</h3>
         </div>
 
         {/* ✅ Location Section with Embedded Google Map */}

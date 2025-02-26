@@ -3,40 +3,41 @@ const router = express.Router();
 const Message = require("../models/Message");
 const nodemailer = require("nodemailer");
 
+// ✅ Correctly define the POST route
 router.post("/send-message", async (req, res) => {
   const { name, email, message } = req.body;
 
+  if (!name || !email || !message) {
+    return res.status(400).json({ success: false, error: "All fields are required!" });
+  }
+
   try {
-    // Save message to MongoDB
+    // Save to MongoDB
     const newMessage = new Message({ name, email, message });
     await newMessage.save();
 
-    // Setup nodemailer
+    // Send email notification
     let transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
-        user: process.env.EMAIL_USER, // Your Gmail address
-        pass: process.env.EMAIL_PASS, // Your Gmail app password
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS,
       },
     });
 
-    // Email options
     let mailOptions = {
       from: process.env.EMAIL_USER,
-      to: process.env.EMAIL_USER, // Send to yourself
-      subject: "New Message from Your Website",
+      to: process.env.EMAIL_USER,
+      subject: "New Message Received",
       text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
     };
 
-    // Send email
     await transporter.sendMail(mailOptions);
 
-    // ✅ Add `success: true` so React knows the request was successful
     res.status(200).json({ success: true, message: "Message sent successfully!" });
-
   } catch (error) {
-    console.error("Error sending message:", error);
-    res.status(500).json({ success: false, error: "Error sending message." });
+    console.error("Error:", error);
+    res.status(500).json({ success: false, error: "Server error while sending message." });
   }
 });
 
