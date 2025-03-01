@@ -52,7 +52,7 @@ const Footer = () => {
             <a href="https://wa.me/+2348163571677" target="_blank" rel="noopener noreferrer">
               <FaWhatsapp className="social-icon" />
             </a>
-            <a href="https://www.linkedin.com/in/Ademola peter kehinde" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.linkedin.com/in/ademola-peter-kehinde-44650a2b9" target="_blank" rel="noopener noreferrer">
               <FaLinkedin className="social-icon" />
             </a>
           </div>

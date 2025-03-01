@@ -66,6 +66,9 @@ import Home from "./components/Home";
 import Contact from "./components/Contact";
 import EducationExperience from "./components/EducationExperience";
 import Footer from "./components/Footer";
+import Projects from "./components/Projects";
+import GraphicDesigns from "./components/GraphicDesigns";
+// import HeroSection from "./components/HeroSection";
 // import CylinderCanvas from "./components/CylinderCanvas"; // Import the new file
 
 function App() {
@@ -73,8 +76,13 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
+        
         <Route path="/contact" element={<Contact />} />
         <Route path="/EducationExperience" element={<EducationExperience />} />
+      </Routes>
+      <Routes>
+        <Route path="/" element={<Projects />} />
+        <Route path="/graphic-designs" element={<GraphicDesigns />} /> {/* New Route */}
       </Routes>
       <Footer />
       {/* <CylinderCanvas />  */}

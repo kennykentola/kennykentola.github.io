@@ -56,17 +56,17 @@ const Contact = () => {
 
         <form onSubmit={handleSubmit} className="contact-form">
           <div className="form-group">
-            <label>Name *</label>
+            <label>Name </label>
             <input type="text" name="name" value={formData.name} onChange={handleChange} required />
           </div>
 
           <div className="form-group">
-            <label>Email Address *</label>
+            <label>Email Address </label>
             <input type="email" name="email" value={formData.email} onChange={handleChange} required />
           </div>
 
           <div className="form-group">
-            <label>Subject *</label>
+            <label>Subject </label>
             <select name="subject" value={formData.subject} onChange={handleChange}>
               <option value="General Inquiry">General Inquiry</option>
               <option value="Collaboration">Collaboration</option>
@@ -75,12 +75,12 @@ const Contact = () => {
           </div>
 
           <div className="form-group">
-            <label>Message *</label>
+            <label>Message </label>
             <textarea name="message" value={formData.message} onChange={handleChange} required></textarea>
           </div>
 
           <div className="form-group">
-            <label>Preferred Contact Method *</label>
+            <label>Preferred Contact Method </label>
             <div className="radio-group">
               <input type="radio" name="contactMethod" value="Email" checked={formData.contactMethod === "Email"} onChange={handleChange} />
               <label>Email</label>

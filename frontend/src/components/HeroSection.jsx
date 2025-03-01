@@ -1,28 +1,32 @@
 import React, { useEffect, useState } from "react";
 import "../components/HeroSection.css";
-import resumePDF from "../assets/resume.pdf";
+import resumePDF from "../assets/resume12.pdf";
 
-const fullIntro = "I'm Ademola Peter kehinde, known as KennyKentola";
-const roles = ["web developer", "Passionate About Coding", "Software Developer", "UI/UX Designer", "Graphic Designer"];
+const fullIntro = "My Name Is Ademola Peter Kehinde, known as KennyKentola";
+const roles = ["Web Developer", "Software Developer", "UI/UX Designer", "Graphic Designer"];
 
 const HeroSection = () => {
+  const fullText = "My Portfolio, I am a ";
   const [typedText, setTypedText] = useState("Welcome to ");
-  const fullText = "  My Portfolio, I'm   ";
   const [displayRole, setDisplayRole] = useState(roles[0]);
   const [menuOpen, setMenuOpen] = useState(false); // Mobile Menu State
 
   useEffect(() => {
     let index = 0;
-    const typeInterval = setInterval(() => {
+    let currentText = "Welcome to "; // Start with this text
+
+    const typeEffect = () => {
       if (index < fullText.length) {
-        setTypedText((prev) => prev + fullText.charAt(index));
+        currentText += fullText[index]; // Append next character
+        setTypedText(currentText); // Update state
         index++;
-      } else {
-        clearInterval(typeInterval);
+        setTimeout(typeEffect, 150); // Call next letter
       }
-    }, 100);
-    return () => clearInterval(typeInterval);
-  }, []);
+    };
+
+    typeEffect(); // Start typing effect
+
+  }, []); // Run once when component mounts
 
   useEffect(() => {
     const roleInterval = setInterval(() => {
@@ -49,7 +53,7 @@ const HeroSection = () => {
     <>
       <nav className="navbar">
         <div className="logo">
-          <span>KENNYKENTOLA</span>
+          <span>KENKENTOLA</span>
         </div>
 
         <div className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>

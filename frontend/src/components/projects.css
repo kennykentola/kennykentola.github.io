@@ -29,9 +29,14 @@
   
    
 }
-
+P{
+  color: var(--color-primary-a1100);
+}
+h2{
+  color: var(--color-primary-a100);
+}
 body {
-  background-color: var(--color-primary-a40);
+  background-color: var(--color-primary-a1252);
   color: white;
   font-family: Arial, sans-serif;
   text-align: center;
@@ -47,7 +52,7 @@ body {
 .projects h2 {
   font-size: 2.5rem;
   font-weight: bold;
-  color: #ffffff;
+  color: var(--color-primary-a10);
 }
 
 .projects h2 span {
@@ -73,7 +78,7 @@ body {
   position: relative;
   width: 100%;
   text-align: center;
-  background: var(--color-primary-a145);
+  background: var(--color-primary-a45);
   padding: 20px;
   border-radius: 10px;
   min-height: 180px;
@@ -114,11 +119,11 @@ body {
   color: #a855f7;
 }
 
-
+/* Image Styling */
 .project-image {
   width: 100%;
-  max-width: 500px; 
-  height: 200px;
+  max-width: 500px; /* Adjust the max width as needed */
+  height: 500px;
   border-radius: 10px;
   box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.2);
 }
@@ -135,7 +140,7 @@ body {
   height: 12px;
   width: 12px;
   margin: 0 5px;
-  background-color: rgb(255, 253, 253);
+  background-color: var(--color-primary-a110);
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.3s;
@@ -213,4 +218,50 @@ body {
     width: 8px;
     height: 8px;
   }
+}
+
+
+
+/* My Graphic Designs Section */
+.graphic-designs {
+  text-align: center;
+  margin: 50px 0;
+}
+
+.graphic-designs h2 {
+  font-size: 32px;
+  color: white;
+}
+
+.graphic-designs h2 span {
+  color: #00c3ff;
+}
+
+.graphic-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.graphic-image {
+  width: 70%;
+  max-width: 200px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.view-designs-btn {
+  background-color: #00c3ff;
+  color: white;
+  font-size: 18px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.view-designs-btn:hover {
+  background-color: #0091cc;
 }

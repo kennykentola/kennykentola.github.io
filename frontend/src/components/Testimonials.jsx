@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"; // ✅ Import useState and useEffect
 import "../components/Testimonials.css"; // Import the CSS file
-import profileImg from "../assets/profile.jpg";
+import profileImg from "../assets/femi.png"; 
 import jeffreyImg from "../assets/jeffrey-sun.jpg";
 import doraImg from "../assets/dora-zhang.jpg";
 import feiImg from "../assets/fei-gao.jpg";
@@ -11,7 +11,7 @@ const testimonialsData = [
     id: 1,
     text: "kennykentola is undeniably one of the most exceptional developers...",
     name: "Femi Olubodun",
-    position: "TRD UNIVERSITY OF IBADAN NIGERIA",
+    position: "TRD UNIVERSITY OF IBADAN NIGERIA Cyber Security ",
     assets: profileImg,
   },
   {

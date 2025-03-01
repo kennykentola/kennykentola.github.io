@@ -1,365 +1,371 @@
 /* ================= General Styles ================= */
 
 :root{
---color-primary-a0: #ffffff;
---color-primary-a5: #d9e6e3;
---color-primary-a10: #b4cdc8;
---color-primary-a15: #90b4ae;
---color-primary-a20: #6c9c94;
---color-primary-a25: #46847b;
---color-primary-a30: #186d63;
---color-primary-a35: #195a52;
---color-primary-a40: #184842;
---color-primary-a45: #163732;
---color-primary-a50: #132724;
---color-primary-a55: #0d1715;
---color-primary-a100: #000000;}
-
-
-
-/* Prevent horizontal scrolling */
-html, body {
-    overflow-x: hidden;
-    width: 100%;
-}
-
-
-
-
-body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    background-color: var(--color-primary-a0);
-    color: var(--color-primary-a0);
-   
-}
-
-/* ================= Navbar ================= */
-.navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 15px 20px;
+    --color-primary-a0: #ffffff;
+    --color-primary-a5: #d9e6e3;
+    --color-primary-a10: #b4cdc8;
+    --color-primary-a15: #90b4ae;
+    --color-primary-a20: #6c9c94;
+    --color-primary-a25: #46847b;
+    --color-primary-a30: #186d63;
+    --color-primary-a35: #195a52;
+    --color-primary-a40: #184842;
+    --color-primary-a45: #163732;
+    --color-primary-a50: #132724;
+    --color-primary-a55: #0d1715;
+    --color-primary-a100: #000000;}
     
-    background: var(--color-primary-a45);
-    font-size: 16px;
-    z-index: 1000;
-}
-
-
-.contact-btn {
-  background: white;
-  color: black;
-}
-.contact-btn:hover {
-  background: #ccc;
-}
-
-/* .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 15px 50px;
-    background: #1A1A2E;
-    background: rgb(26, 26, 46,0.8);
-    font-size: 16px;
-    z-index: 1000;
-} */
-
-
-.btn {
-    background-color: rgb(127, 7, 240);
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s ease-in-out;
-}
-
-.btn:hover {
-    background-color: #0f1188;
-}
-/* ✅ Overlay for Dimming Effect */
-.hero::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.4); 
-    z-index: 1;
-}
-
-/* ✅ Ensure text stays above the overlay */
-.hero-title, .hero-subtitle, .btn {
-    position: relative;
-    z-index: 3;
-}
-
-
-
-/* Typewriter Effect */
-.hero-title {
-    font-size: 3rem;
-    font-weight: bold;
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: 3px solid white;
-    animation: blink 1s infinite;
-}
-
-.hero-intro{
-    z-index: 35;
-}
-
-.logo {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-style:oblique;
-    display: flex;
-    align-items: center;
-    font-weight: bold;
-}
-
-
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    margin-left: 14px;
-   
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: white;
-    font-weight: 500;
-    padding: 8px 15px;
-    border-radius: 20px;
-    transition: 0.3s ease-in-out;
-    border: 2px solid;
-}
-
-.nav-links a:hover {
-    background: white;
-    color: black;
-    border: 2px solid;
-}
-
-
-
-.nav-links a {
-    white-space: nowrap; 
-    padding: 8px 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-
-.nav-links a:hover {
-    background: white;
-    color: black;
-    border: 2px solid;
-    text-decoration: none;
-}
-.menu-toggle {  
-    display: none;  
-}  
-/* ================= Hero Section ================= */  
-.hero {  
-    position: relative;  
-    text-align: center;  
-    padding: 90px 20px;  
-    background: url('../assets/laptop.jpg') no-repeat center center/cover;  
-    color: var(--color-primary-a0);  
-    height: 100vh; /* You might want to consider min-height for responsiveness */  
-    display: flex;  
-    flex-direction: column;  
-    justify-content: center;  
-    align-items: center;  
-}  
-
-/* Title and Subtitle Responsive Font Size */  
-.hero-title {  
-    font-size: 5vw; /* Responsive font size */  
-    font-weight: bold;  
-    white-space: nowrap;  
-    overflow: hidden;  
-    border-right: 3px solid white;  
-    animation: blink 4s infinite;  
-}  
-
-
-.hero-title {  
-   
-    border-right: 3px solid white;  
-    animation: blinks 1s infinite alternate;  
-}
-
-
-@keyframes blink {
-    0% { border-right-color: red; color: red; color: white; }
-    16% { border-right-color: orange; color: orange; color: white; }
-    32% { border-right-color: yellow; color: yellow; }
-    48% { border-right-color: green; color: green; color:#7b8526  }
-    64% { border-right-color: blue; color: blue; color:black }
-    80% { border-right-color: indigo; color: indigo; }
-    100% { border-right-color: violet; color: violet;  color: white;}
-}
-
-
-
-.hero-title {  
-    font-size: 5vw; /* Responsive font size */  
-    font-weight: bold;  
-    white-space: nowrap;  
-    overflow: hidden;  
-    border-right: 3px solid white;  
-    animation: blink 1s infinite alternate;  
-}
-
-.hero-subtitle {  
-    font-size: 4vw; /* Responsive font size */  
-    font-weight: 800;  
-    color: rgb(234, 0, 255);  
-    transition: opacity 0.5s ease-in-out;  
-}  
-
-/* Button Responsive */  
-.btn {  
-    padding: 12px 25px; /* Slightly larger padding but adjust for smaller screens */  
-}  
-
-/* Extra styles for mobile screens */  
-@media only screen and (max-width: 768px) {  
-    .hero {  
-        place-content: center;
-        padding: 30px 10px; /* Reduced padding for mobile */  
-        /* height: auto;  */
-        min-height: 360px;  
-    }  
-
-    .hero-title {  
-        font-size: 6vw; /* Adjust font size for mobile */  
-    }  
-
-    .hero-subtitle {  
-        font-size: 5vw; /* Adjust font size for mobile */  
-    }  
-
-    .btn {  
-        padding: 10px 20px; /* Maintain appropriate size for mobile buttons */  
-    }  
-
-    /* Adjust for overall layout */  
-    .scroll-down {  
-        font-size: 20px; /* Adjust scroll-down indicator */  
-    }  
-
-/* Hero Image */
-.hero-image {
-    width: 80%;
-    /* max-width: 500px; */
-    margin: 20px 0;
-}
-
-/* Resume Button */
-.btn {
-    background-color: rgb(127, 7, 240);
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s ease-in-out;
-}
-
-.btn:hover {
-    background-color: #0f1188;
-}
-.nav-links .contact-btn{
-    color: rgb(181, 181, 185);
-}
-
-
-.scroll-down {
-    font-size: 30px;
-    margin-top: 15px;
-    cursor: pointer;
-    animation: bounce 1.5s infinite;
-}
-
-@keyframes bounce {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(10px); }
-} 
-.menu-toggle {  
-    display: none;  
-}  
-
-
-    .menu-toggle {  
-        display: flex;  
-        cursor: pointer;  
-        font-size: 24px;  
-        color: white;  
-    }  
-
-    .nav-links {  
-        display: none;  
-        flex-direction: column; 
-        position: absolute;
-        top: 60px;  
-        left: 0;  
-        right: 0;  
-        align-items: center;
-        background-color: var(--color-primary-a45);
-        z-index: 999;   
-    }  
-
-  
-
-    .nav-links a {
-        width: 80%;
-        text-align: center;
-        padding: 12px;
-    }
-
-    .contact-btn {
-        opacity: 1; /* Ensures visibility */
-    }
-
-
-    .nav-links.show {  
-        display: flex;  
+    
+    
+    /* Prevent horizontal scrolling */
+    html, body {
+        overflow-x: hidden;
         width: 100%;
-        height: auto;
-    } 
+    }
     
-   
-
-    .nav-links a {
-        width: 80%; /* Makes buttons uniform */
+    
+    
+    
+    body {
+        font-family: 'Poppins', sans-serif;
+        margin: 0;
+        padding: 0;
         text-align: center;
-        padding: 12px;
+        background-color: var(--color-primary-a0);
+        color: var(--color-primary-a0);
+       
     }
-
+    
+    /* ================= Navbar ================= */
+    .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 15px 20px;
+        
+        background:  var(--color-primary-a50);
+        font-size: 16px;
+        z-index: 1000;
+    }
+    
+    
     .contact-btn {
-        opacity: 1; /* Ensures visibility */
+      background: var(--color-primary-a30);
+      color: var(--color-primary-a0);
     }
-}
+    .contact-btn:hover {
+      background: #ccc;
+    }
+    
+    /* .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 15px 50px;
+        background: #1A1A2E;
+        background: rgb(26, 26, 46,0.8);
+        font-size: 16px;
+        z-index: 1000;
+    } */
+    
+    
+    .btn {
+        background-color: rgb(127, 7, 240);
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: 0.3s ease-in-out;
+    }
+    
+    .btn:hover {
+        background-color: #0f1188;
+    }
+    /* ✅ Overlay for Dimming Effect */
+    .hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.4); 
+        z-index: 1;
+    }
+    
+    /* ✅ Ensure text stays above the overlay */
+    .hero-title, .hero-subtitle, .btn {
+        position: relative;
+        z-index: 3;
+    }
+    
+    
+    
+    /* Typewriter Effect */
+    .hero-title {
+        font-size: 3rem;
+        font-weight: bold;
+        white-space: nowrap;
+        overflow: hidden;
+        border-right: 3px solid white;
+        animation: blink 1s infinite;
+    }
+    
+    .hero-intro{
+        z-index: 35;
+    }
+    
+    .logo {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-style:oblique;
+        display: flex;
+        align-items: center;
+        font-weight: bold;
+        color: var(--color-primary-a0);
+    }
+    
+    
+    
+    .nav-links {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        margin-left: 14px;
+       
+    }
+    
+    .nav-links a {
+        text-decoration: none;
+        color: var(--color-primary-a0);
+        font-weight: 500;
+        padding: 8px 15px;
+        border-radius: 20px;
+        transition: 0.3s ease-in-out;
+        border: 2px solid;
+    }
+ .hero-intro{
+    color: var(--color-primary-a0);
+    font-size: 30px;
+    font-weight: 800;
+ }
+    
+    .nav-links a:hover {
+        background: white;
+        color: var(--color-primary-a15);
+        border: 2px solid;
+    }
+    
+    
+    
+    .nav-links a {
+        white-space: nowrap; 
+        padding: 8px 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    
+    .nav-links a:hover {
+        background: white;
+        color: black;
+        border: 2px solid;
+        text-decoration: none;
+    }
+    .menu-toggle {  
+        display: none;  
+    }  
+    /* ================= Hero Section ================= */  
+    .hero {  
+        position: relative;  
+        text-align: center;  
+        padding: 90px 20px;  
+        background: url('../assets/laptop.jpg') no-repeat center center/cover;  
+        color: var(--color-primary-a0);  
+        height: 100vh; /* You might want to consider min-height for responsiveness */  
+        display: flex;  
+        flex-direction: column;  
+        justify-content: center;  
+        align-items: center;  
+    }  
+    
+    /* Title and Subtitle Responsive Font Size */  
+    .hero-title {  
+        font-size: 5vw; /* Responsive font size */  
+        font-weight: bold;  
+        white-space: nowrap;  
+        overflow: hidden;  
+        border-right: 3px solid white;  
+        animation: blink 4s infinite;  
+    }  
+    
+    
+    .hero-title {  
+       
+        border-right: 3px solid white;  
+        animation: blinks 1s infinite alternate;  
+    }
+    
+    
+    @keyframes blink {
+        0% { border-right-color: red; color: red; color: white; }
+        16% { border-right-color: orange; color: orange; color: white; }
+        32% { border-right-color: yellow; color: yellow; }
+        48% { border-right-color: green; color: green; color:#7b8526  }
+        64% { border-right-color: blue; color: blue; color:black }
+        80% { border-right-color: indigo; color: indigo; }
+        100% { border-right-color: violet; color: violet;  color: white;}
+    }
+    
+    
+    
+    .hero-title {  
+        font-size: 5vw; /* Responsive font size */  
+        font-weight: bold;  
+        white-space: nowrap;  
+        overflow: hidden;  
+        border-right: 3px solid white;  
+        animation: blink 1s infinite alternate;  
+    }
+    
+    .hero-subtitle {  
+        font-size: 4vw; /* Responsive font size */  
+        font-weight: 800;  
+        color: rgb(234, 0, 255);  
+        transition: opacity 0.5s ease-in-out;  
+    }  
+    
+    /* Button Responsive */  
+    .btn {  
+        padding: 12px 25px; /* Slightly larger padding but adjust for smaller screens */  
+    }  
+    
+    /* Extra styles for mobile screens */  
+    @media only screen and (max-width: 768px) {  
+        .hero {  
+            place-content: center;
+            padding: 30px 10px; /* Reduced padding for mobile */  
+            /* height: auto;  */
+            min-height: 360px;  
+        }  
+    
+        .hero-title {  
+            font-size: 6vw; /* Adjust font size for mobile */  
+        }  
+    
+        .hero-subtitle {  
+            font-size: 5vw; /* Adjust font size for mobile */  
+        }  
+    
+        .btn {  
+            padding: 10px 20px; /* Maintain appropriate size for mobile buttons */  
+        }  
+    
+        /* Adjust for overall layout */  
+        .scroll-down {  
+            font-size: 20px; /* Adjust scroll-down indicator */  
+        }  
+    
+    /* Hero Image */
+    .hero-image {
+        width: 80%;
+        /* max-width: 500px; */
+        margin: 20px 0;
+    }
+    
+    /* Resume Button */
+    .btn {
+        background-color: rgb(127, 7, 240);
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: 0.3s ease-in-out;
+    }
+    
+    .btn:hover {
+        background-color: #0f1188;
+    }
+    .nav-links .contact-btn{
+        color: rgb(181, 181, 185);
+    }
+    
+    
+    .scroll-down {
+        font-size: 30px;
+        margin-top: 15px;
+        cursor: pointer;
+        animation: bounce 1.5s infinite;
+    }
+    
+    @keyframes bounce {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(10px); }
+    } 
+    .menu-toggle {  
+        display: none;  
+    }  
+    
+    
+        .menu-toggle {  
+            display: flex;  
+            cursor: pointer;  
+            font-size: 24px;  
+            color: white;  
+        }  
+    
+        .nav-links {  
+            display: none;  
+            flex-direction: column; 
+            position: absolute;
+            top: 60px;  
+            left: 0;  
+            right: 0;  
+            align-items: center;
+            background-color: var(--color-primary-a45);
+            z-index: 999;   
+        }  
+    
+      
+    
+        .nav-links a {
+            width: 80%;
+            text-align: center;
+            padding: 12px;
+        }
+    
+        .contact-btn {
+            opacity: 1; /* Ensures visibility */
+        }
+    
+    
+        .nav-links.show {  
+            display: flex;  
+            width: 100%;
+            height: auto;
+        } 
+        
+       
+    
+        .nav-links a {
+            width: 80%; /* Makes buttons uniform */
+            text-align: center;
+            padding: 12px;
+        }
+    
+        .contact-btn {
+            opacity: 1; /* Ensures visibility */
+        }
+    }

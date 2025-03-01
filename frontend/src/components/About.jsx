@@ -1,5 +1,5 @@
 import React from "react";
-import profileImage from "../assets/profile.png"; // Ensure the correct path
+import profileImage from "../assets/profile2.png"; // Ensure the correct path
 import "../components/About.css"; // Import your styles
 
 const About = () => {
@@ -22,13 +22,13 @@ const About = () => {
         {/* About Text */}
         <div className="about-content">
           <p>
-          Hi, I'm Kenkentola! 👋 I'm a passionate Full-Stack Developer specializing in 
+          Hi, I'm Kennykentola! 👋 I'm a passionate Full-Stack Developer specializing in 
             <strong> React, Node.js, and Python</strong>. I love building 
             scalable applications with efficient front-end and back-end architecture.
             I thrive on solving complex problems with innovative solutions
           </p>
           <p>
-            I'm also passionate about <strong>photography, design, and modern art</strong>. 
+            I'm also passionate about <strong >photography, design, and modern art </strong>. 
             When I'm not coding, you'll find me exploring creative pursuits.
           </p>
           <p><strong>Interests:</strong> Photography, Movies & Science Fiction</p>

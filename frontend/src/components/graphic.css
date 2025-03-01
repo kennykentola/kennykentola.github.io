@@ -1,0 +1,229 @@
+/* General Styling */
+body {
+  background: linear-gradient(to right, #001f3f, #3a1c71, #ff0099);
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+}
+
+/* 🔹 Fix Navbar Overlapping Content */
+.portfolio-container {
+  padding-top: 80px; /* Pushes content below navbar */
+}
+
+/* 🔥 Navbar Styling */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+/* 🔹 Desktop Menu */
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+  color: #00d4ff;
+}
+
+/* 🔥 Mobile Menu */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* 🔹 Mobile Styles */
+@media screen and (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    flex-direction: column;
+    text-align: center;
+    display: none;
+    padding: 20px 0;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links li {
+    padding: 10px 0;
+  }
+}
+
+/* 🔹 Title Styling */
+.title {
+  font-size: 2.8rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.title span {
+  background: linear-gradient(45deg, #ff0099, #ff6600);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* 🔹 Sections */
+.section {
+  margin: 50px auto;
+  padding: 50px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+/* 🔹 Gradient Backgrounds */
+.gradient-bg {
+  background: linear-gradient(135deg, rgba(255, 0, 153, 0.2), rgba(58, 28, 113, 0.3));
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 40px;
+  border-radius: 15px;
+}
+
+/* 🔹 Content Overlay */
+.content-overlay {
+  text-align: center;
+  width: 80%;
+  margin: auto;
+}
+
+.content-overlay h2 {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+/* 🔹 Design Grid */
+.design-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.design-box {
+  width: 100%;
+  height: auto;
+  max-width: 250px;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.design-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 10px 20px rgba(255, 0, 153, 0.5);
+}
+
+/* 🔹 Why Choose Me Section */
+.why-choose-me {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 50px;
+  border-radius: 15px;
+}
+
+.text-content {
+  margin-bottom: 20px;
+}
+
+.image-content {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.design-image,
+.designer-image {
+  width: 300px;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.graphic-image {
+  width: 100%;
+  max-width: 350px;
+  height: 300px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.graphic-image:hover {
+  transform: scale(1.05);
+}
+
+/* 🔹 Text Box */
+.why-choose-me-box {
+  background: rgba(0, 0, 0, 0.7);
+  color: #00eaff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: left;
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.why-choose-me-box p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* 🔹 Mobile Responsive */
+@media (max-width: 768px) {
+  .design-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+
+  .design-image,
+  .designer-image {
+    width: 90%;
+  }
+
+  .content-overlay {
+    width: 100%;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+}

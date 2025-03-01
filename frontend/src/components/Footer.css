@@ -1,4 +1,4 @@
-/* .social-links{
+.social-links{
     display: block;
     text-align: center;
     margin-top: 20px;
@@ -9,7 +9,7 @@
     font-size: 20px;
     margin: 0 10px;
     color: white; 
- } */
+ } 
 
  :root{
     --color-primary-a0: #ffffff;
@@ -27,8 +27,11 @@
     --color-primary-a100: #000000;}
 
 /* Footer Styles */
+p{
+    color: var(--color-primary-a0);
+}
 .footer {
-    background-color:var(--color-primary-a40);/* ✅ Light Blue */
+    background-color: var(--color-primary-a50);/* ✅ Light Blue */
     color: white;
     padding: 20px 10px;
     text-align: center;
@@ -73,7 +76,7 @@
 /* ✅ Social Icon */
 .social-icon {
     font-size: 20px;
-    background: #333;
+    background: var(--color-primary-a25);
     color: white;
     padding: 8px;
     border-radius: 50%;
@@ -82,7 +85,7 @@
 }
 
 .social-icon:hover {
-    background: black;
+    background: var(--color-primary-a10);
 }
 
 /* ✅ Responsive Design */

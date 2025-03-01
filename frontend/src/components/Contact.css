@@ -12,7 +12,9 @@
   --color-primary-a45: #163732;
   --color-primary-a50: #132724;
   --color-primary-a55: #0d1715;
-  --color-primary-a100: #000000;}
+  --color-primary-a100: #000000;
+--cont:rgba(232, 232, 235, 0.8);
+}
 
 body {
   margin: 0;
@@ -23,8 +25,8 @@ body {
 
 
 .contact-container {
-  background: var(--color-primary-a45);
-  color: white;
+  background: var(--cont);
+  color: var(--color-primary-a55);
   text-align: center;
   padding: 50px 20px;
   display: flex;
@@ -36,7 +38,7 @@ body {
 }
 
 .contact-container h2 {
-  color: white;
+  color: var(--color-primary-a30);
 }
 /* Contact Form */
 .contact-form {
