@@ -24,7 +24,7 @@ const educationData = [
   {
     institution: "the light house, Lagos, ibadan",
     duration: "08.2024 - currently / Ibadan Oyo,  Nigeria",
-    role: "Bachelor: Computer Eng.",
+    role: " Computer Eng.",
     link: "#",
   },
   

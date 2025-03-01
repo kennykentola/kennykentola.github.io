@@ -2,7 +2,7 @@
 .education-section {
     text-align: center;
     padding: 50px 10%;
-    background-color:  rgb(226, 226, 235);
+    background-color:  #EEF2FF;
     color: #333;
 }
 
@@ -15,7 +15,7 @@
 
 /* Education Container */
 .education-container {
-    background:  rgba(232, 232, 235, 0.8);
+    background:  #EEF2FF;
     display: flex;
     flex-direction: column;
     gap: 15px;

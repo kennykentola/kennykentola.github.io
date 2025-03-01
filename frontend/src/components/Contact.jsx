@@ -9,42 +9,81 @@ const Contact = () => {
     message: "",
     contactMethod: "Email",
     referral: "",
+    appointmentDate: "",
+    appointmentTime: "",
   });
+
+  const [isLoading, setIsLoading] = useState(false);
+  const [responseMessage, setResponseMessage] = useState("");
 
   // ✅ Handle input change
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  // ✅ Handle form submission
+  // ✅ Handle form submission (Messages & Appointments)
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsLoading(true);
+    setResponseMessage("");
 
     try {
-      const response = await fetch("https://backend-rntqth1tu-kennykentolas-projects.vercel.app/api/messages/send-message", {
+      // Send message request
+      const messageResponse = await fetch("https://backend-rntqth1tu-kennykentolas-projects.vercel.app/api/messages/send-message", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+          contactMethod: formData.contactMethod,
+          referral: formData.referral,
+        }),
       });
 
-      const data = await response.json();
+      const messageData = await messageResponse.json();
 
-      if (data.success) {
-        alert("Message Sent Successfully!");
-        setFormData({
-          name: "",
-          email: "",
-          subject: "General Inquiry",
-          message: "",
-          contactMethod: "Email",
-          referral: "",
-        });
-      } else {
-        alert("Failed to send message. Try again later.");
+      if (!messageData.success) {
+        throw new Error("Failed to send message. Please try again.");
       }
+
+      // If an appointment is scheduled, send appointment request
+      if (formData.appointmentDate && formData.appointmentTime) {
+        const appointmentResponse = await fetch("https://backend-rntqth1tu-kennykentolas-projects.vercel.app/api/appointments/book", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            name: formData.name,
+            email: formData.email,
+            date: formData.appointmentDate,
+            time: formData.appointmentTime,
+          }),
+        });
+
+        const appointmentData = await appointmentResponse.json();
+
+        if (!appointmentData.success) {
+          throw new Error("Failed to schedule appointment. Please try again.");
+        }
+      }
+
+      setResponseMessage("Message sent successfully!");
+      setFormData({
+        name: "",
+        email: "",
+        subject: "General Inquiry",
+        message: "",
+        contactMethod: "Email",
+        referral: "",
+        appointmentDate: "",
+        appointmentTime: "",
+      });
     } catch (error) {
-      console.error("Error submitting message:", error);
-      alert("An error occurred.");
+      console.error("Error:", error);
+      setResponseMessage(error.message || "An error occurred. Please try again.");
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -95,18 +134,28 @@ const Contact = () => {
             <input type="text" name="referral" value={formData.referral} onChange={handleChange} />
           </div>
 
-          <button type="submit" className="send-btn">Send Message</button>
-        </form>
-        {/* Contact Information Section */}
-      <div className="contact-info-section">
-        <h2>Contact Information</h2>
-        <p>Email: <a href="mailto:peterkehindeademola@gmail.com">peterkehindeademola@gmail.com</a></p>
-        <p>GitHub: <a href="https://github.com/kennykentola" target="_blank" rel="noopener noreferrer">github.com/kennykentola</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/ademola-peter-kehinde-44650a2b9" target="_blank" rel="noopener noreferrer">linkedin.com/in/ademola-peter-kehinde</a></p>
-      </div>
-      </section>
+          {/* Scheduling Feature */}
+          <div className="form-group">
+            <label>Schedule an Appointment (Optional)</label>
+            <input type="date" name="appointmentDate" value={formData.appointmentDate} onChange={handleChange} />
+            <input type="time" name="appointmentTime" value={formData.appointmentTime} onChange={handleChange} />
+          </div>
 
-      
+          <button type="submit" className="send-btn" disabled={isLoading}>
+            {isLoading ? "Sending..." : "Send Message"}
+          </button>
+
+          {responseMessage && <p className="response-message">{responseMessage}</p>}
+        </form>
+
+        {/* Contact Information Section */}
+        <div className="contact-info-section">
+          <h2>Contact Information</h2>
+          <p>Email: <a href="mailto:peterkehindeademola@gmail.com">peterkehindeademola@gmail.com</a></p>
+          <p>GitHub: <a href="https://github.com/kennykentola" target="_blank" rel="noopener noreferrer">github.com/kennykentola</a></p>
+          <p>LinkedIn: <a href="https://www.linkedin.com/in/ademola-peter-kehinde-44650a2b9" target="_blank" rel="noopener noreferrer">linkedin.com/in/ademola-peter-kehinde</a></p>
+        </div>
+      </section>
     </>
   );
 };
