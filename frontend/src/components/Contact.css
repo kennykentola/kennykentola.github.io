@@ -157,6 +157,25 @@ textarea {
   text-decoration: underline;
 }
 
+/* Response Message */
+.response-message {
+  font-size: 16px;
+  color: #d9534f; /* Bootstrap danger color for error messages */
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* WhatsApp Link */
+.response-message a {
+  color: #25d366; /* WhatsApp green color */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.response-message a:hover {
+  text-decoration: underline;
+}
+
 /* ✅ Mobile Fix: Prevent inputs from overflowing */
 @media only screen and (max-width: 768px) {
   .contact-container {

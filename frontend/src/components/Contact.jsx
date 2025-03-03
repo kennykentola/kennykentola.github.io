@@ -15,6 +15,7 @@ const Contact = () => {
 
   const [isLoading, setIsLoading] = useState(false);
   const [responseMessage, setResponseMessage] = useState("");
+  const [failedAttempts, setFailedAttempts] = useState(0); // Track failed attempts
 
   // ✅ Handle input change
   const handleChange = (e) => {
@@ -79,9 +80,11 @@ const Contact = () => {
         appointmentDate: "",
         appointmentTime: "",
       });
+      setFailedAttempts(0); // Reset failed attempts on success
     } catch (error) {
       console.error("Error:", error);
       setResponseMessage(error.message || "An error occurred. Please try again.");
+      setFailedAttempts((prev) => prev + 1); // Increment failed attempts
     } finally {
       setIsLoading(false);
     }
@@ -145,7 +148,20 @@ const Contact = () => {
             {isLoading ? "Sending..." : "Send Message"}
           </button>
 
-          {responseMessage && <p className="response-message">{responseMessage}</p>}
+          {responseMessage && (
+            <p className="response-message">
+              {responseMessage}
+              {failedAttempts >= 2 && (
+                <>
+                  {" "}
+                  If you do not receive a response, please contact me directly via{" "}
+                  <a href="https://wa.me/+2348163571677" target="_blank" rel="noopener noreferrer">
+                    WhatsApp
+                  </a>.
+                </>
+              )}
+            </p>
+          )}
         </form>
 
         {/* Contact Information Section */}
