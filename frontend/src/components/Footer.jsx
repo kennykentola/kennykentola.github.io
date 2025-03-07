@@ -43,10 +43,10 @@ const Footer = () => {
         {/* ✅ Social Media */}
         <div className="footer-section">
           <h4>CONNECT</h4>
-          <p>© 2024 kennykentola. All Rights Reserved.</p>
+          <p>© 2025 kennykentola. All Rights Reserved.</p>
 
           <div className="social-links">
-            <a href="https://www.facebook.com/https://web.facebook.com/kehindepeter.ademola" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.facebook.com/https://web.facebook.com/kehindepeterademola" target="_blank" rel="noopener noreferrer">
               <FaFacebook className="social-icon" />
             </a>
             <a href="https://wa.me/+2348163571677" target="_blank" rel="noopener noreferrer">

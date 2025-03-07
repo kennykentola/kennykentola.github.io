@@ -1,13 +1,13 @@
 import React from "react";
-import profileImage from "../assets/profile2.png"; // Ensure the correct path
-import "../components/About.css"; // Import your styles
+import profileImage from "../assets/profile2.png"; 
+import "../components/About.css"; 
 
 const About = () => {
   // Function to confirm and make a call
   const handleCall = () => {
     const confirmCall = window.confirm("Do you want to call KennyKentola?");
     if (confirmCall) {
-      window.location.href = "tel:+2348163571677"; // Replace with your actual phone number
+      window.location.href = "tel:+2348163571677"; 
     }
   };
 
@@ -22,7 +22,7 @@ const About = () => {
         {/* About Text */}
         <div className="about-content">
           <p>
-          Hi, I'm Kennykentola! 👋 I'm a passionate Full-Stack Developer specializing in 
+          Hi, I'm Kennykentola! 👋 I am passionate Full-Stack Developer specializing in 
             <strong> React, Node.js, and Python</strong>. I love building 
             scalable applications with efficient front-end and back-end architecture.
             I thrive on solving complex problems with innovative solutions

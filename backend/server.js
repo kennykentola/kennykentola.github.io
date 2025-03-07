@@ -1,7 +1,7 @@
 require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
-const cors = require("cors"); // Optional: Only needed if your frontend is on a different domain/port
+const cors = require("cors"); 
 
 const app = express();
 const PORT = process.env.PORT || 5001;

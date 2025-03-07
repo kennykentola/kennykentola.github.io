@@ -17,9 +17,9 @@ function Home() {
         <title>KennyKentola Portfolio</title>
         <meta property="og:title" content="KennyKentola Portfolio" />
         <meta property="og:description" content="Welcome to my portfolio website!" />
-        <meta property="og:image" content="https://your-image-url.com/portfolio-image.png" />
+        <meta property="og:image" content="https://kennykentola.vercel.app/assets/port.png" />
         <meta property="og:url" content="https://kennykentola.vercel.app" />
-        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:card" content="portfolio image" />
       </Helmet>
 
       {/* Page Content */}

@@ -58,7 +58,7 @@ p{
 
 
   
-  /* about me start */
+  
 
   .about {
     background-color: rgba(255, 255, 255, 0.9); /* Dark background */
@@ -84,12 +84,12 @@ p{
   }
   
   .profile-image {
-    width: 150px; /* Adjust image size */
+    width: 150px; 
     height: 150px;
-    border-radius: 50%; /* Make it circular */
+    border-radius: 50%; 
     object-fit: cover;
     margin-bottom: 20px;
-    border: 3px solid #fff; /* White border */
+    border: 3px solid #fff; 
   }
   
   .about-content {
@@ -108,4 +108,3 @@ p{
     font-weight: bold;
   }
   
-  /* about me end */

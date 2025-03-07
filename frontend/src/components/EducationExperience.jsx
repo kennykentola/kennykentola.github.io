@@ -1,5 +1,5 @@
 import React from "react";
-import "./Education.css"; // Import the CSS file
+import "./Education.css"; 
 
 const educationData = [
   {

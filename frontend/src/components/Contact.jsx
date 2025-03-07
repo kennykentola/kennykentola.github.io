@@ -17,12 +17,12 @@ const Contact = () => {
   const [responseMessage, setResponseMessage] = useState("");
   const [failedAttempts, setFailedAttempts] = useState(0); // Track failed attempts
 
-  // ✅ Handle input change
+  //  Handle input change
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  // ✅ Handle form submission (Messages & Appointments)
+  //  Handle form submission (Messages & Appointments)
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
@@ -154,7 +154,7 @@ const Contact = () => {
               {failedAttempts >= 2 && (
                 <>
                   {" "}
-                  If you do not receive a response, please contact me directly via{" "}
+                  If you do not receive a successfully message,our site is runing some tasks, please contact me directly via{" "}
                   <a href="https://wa.me/+2348163571677" target="_blank" rel="noopener noreferrer">
                     WhatsApp
                   </a>.
